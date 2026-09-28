@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-canvas: #121111;
+    --color-corner: #dc2626;
+    --color-amber:#296ed6;
+    --color-giz: #f3f4f6;
+  }
+}
+
+.bg-canvas {
+  background-color: #121111;
+}
+
+.text-giz {
+  color: #f3f4f6;
+}
+
+.text-corner {
+  color: #dc2626;
+}
+
+.bg-corner {
+  background-color: #dc2626;
+}
+
+.text-amber {
+  color: #296ed6;
+}
+
+.bg-amber {
+  background-color: #296ed6;
+}
+
+.font-heading {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fundo sutil com gradiente escuro */
+.bg-hero-pattern {
+  background-image: linear-gradient(to bottom, rgba(18, 17, 17, 0.8), rgba(18, 17, 17, 0.95)), radial-gradient(circle at center, #261818 0%, #121111 70%);
+}

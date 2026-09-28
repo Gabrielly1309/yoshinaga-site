@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Yoshinaga Fight Team | Boxe & Kickboxing em Mogi das Cruzes</title>
+    <!-- Google Fonts: Anton & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS Play CDN (Garante que o design carregue direto no navegador) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Seu arquivo de estilo separado -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="bg-canvas text-giz font-sans selection:bg-corner selection:text-white">
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-canvas/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+           <a href="#" class="flex items-center py-2">
+                <!-- Substitua 'logo.png' pelo nome exato do arquivo da sua logo -->
+                <img src="imagens/logo.png" alt="Yoshinaga Fight Team" class="h-12 w-auto object-contain">
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm tracking-wide">
+                <a href="#modalidades" class="hover:text-amber transition-colors">MODALIDADES</a>
+                <a href="#sobre" class="hover:text-amber transition-colors">O CT</a>
+                <a href="#horarios" class="hover:text-amber transition-colors">HORÁRIOS</a>
+                <a href="#atletas" class="hover:text-amber transition-colors">EQUIPE</a>
+                <a href="#galeria" class="hover:text-amber transition-colors">GALERIA</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-corner to-amber text-white px-5 py-2.5 rounded-full font-bold text-sm tracking-wide shadow-lg shadow-corner/20 hover:scale-105 transition-transform">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> MATRICULE-SE
+                </a>
+                <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-canvas border-b border-white/10 px-6 py-4 flex flex-col gap-4 font-semibold">
+            <a href="#modalidades" class="mobile-link hover:text-amber">MODALIDADES</a>
+            <a href="#sobre" class="mobile-link hover:text-amber">O CT</a>
+            <a href="#horarios" class="mobile-link hover:text-amber">HORÁRIOS</a>
+            <a href="#atletas" class="mobile-link hover:text-amber">EQUIPE</a>
+            <a href="#galeria" class="mobile-link hover:text-amber">GALERIA</a>
+            <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-corner text-white py-3 rounded-xl font-bold text-sm">
+                <i class="fa-brands fa-whatsapp"></i> MATRICULE-SE NO WHATSAPP
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-hero-pattern bg-cover bg-center">
+        <div class="absolute inset-0 bg-gradient-to-t from-canvas via-canvas/80 to-canvas/40"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10 w-full">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-corner/20 border border-corner/40 text-amber text-xs font-bold uppercase tracking-widest mb-6 animate-pulse">
+                <i class="fa-solid fa-location-dot"></i> Mogi das Cruzes - SP
+            </div>
+            
+            <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl tracking-wider text-white uppercase mb-6 drop-shadow-md">
+                Transformando vidas <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-corner to-amber">através do esporte</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-giz/80 text-base sm:text-lg mb-10 font-light">
+                Disciplina, técnica e superação. Evolua seu condicionamento físico e mental com treinos de alto rendimento para iniciantes e atletas.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gradient-to-r from-corner to-amber text-white font-bold px-8 py-4 rounded-xl text-lg tracking-wider shadow-xl shadow-corner/30 hover:scale-105 transition-transform flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> QUERO FAZER UMA AULA EXPERIMENTAL
+                </a>
+                <a href="#modalidades" class="w-full sm:w-auto bg-white/5 border border-white/20 text-white font-bold px-8 py-4 rounded-xl text-lg tracking-wider hover:bg-white/10 transition-colors">
+                    CONHECER MODALIDADES
+                </a>
+            </div>
+
+            <!-- Tale of the tape mini info -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 pt-8">
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                    <span class="block font-heading text-3xl text-amber">BOXE</span>
+                    <span class="text-xs text-giz/60 uppercase tracking-widest">Nobre Arte & Defesa</span>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                    <span class="block font-heading text-3xl text-corner">KICKBOXING</span>
+                    <span class="text-xs text-giz/60 uppercase tracking-widest">Trocação Completa</span>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                    <span class="block font-heading text-3xl text-white">+14 MIL</span>
+                    <span class="text-xs text-giz/60 uppercase tracking-widest">Seguidores no Insta</span>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                    <span class="block font-heading text-3xl text-amber">TOTAL</span>
+                    <span class="text-xs text-giz/60 uppercase tracking-widest">Foco e Disciplina</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades" class="py-24 bg-canvas border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber text-xs font-bold uppercase tracking-widest block mb-2">ESPECIALIDADES DO CT</span>
+                <h2 class="font-heading text-4xl sm:text-5xl text-white tracking-wide uppercase">ESCOLHA SUA MODALIDADE</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Boxe Card -->
+                <div class="bg-neutral-900/80 rounded-2xl border border-white/10 p-8 relative overflow-hidden group hover:border-corner transition-colors">
+                    <div class="absolute top-0 right-0 bg-corner text-white font-heading px-6 py-2 rounded-bl-2xl text-lg tracking-wider">BOXE</div>
+                    <div class="mb-6 w-16 h-16 rounded-xl bg-corner/20 flex items-center justify-center text-corner text-3xl">
+                        <i class="fa-solid fa-hand-fist"></i>
+                    </div>
+                    <h3 class="font-heading text-3xl text-white mb-2">NOBRE ARTE</h3>
+                    <p class="text-amber font-semibold text-sm mb-4 uppercase tracking-wider">Disciplina, Confiança, Saúde, Autocontrole, Resultados!</p>
+                    <p class="text-giz/80 mb-6 leading-relaxed">
+                        Foco em movimentação de pernas, esquivas, precisão de golpes e condicionamento cardiovascular extremo. Excelente para queima de calorias, autodefesa e alívio do estresse.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                        <div class="bg-neutral-950 p-3 rounded-lg border border-white/5 text-xs text-center"><i class="fa-solid fa-child text-corner block mb-1 text-base"></i> A partir de 7 anos</div>
+                        <div class="bg-neutral-950 p-3 rounded-lg border border-white/5 text-xs text-center"><i class="fa-solid fa-users text-corner block mb-1 text-base"></i> Homens e Mulheres</div>
+                        <div class="bg-neutral-950 p-3 rounded-lg border border-white/5 text-xs text-center"><i class="fa-solid fa-ranking-star text-corner block mb-1 text-base"></i> Iniciantes & Avançados</div>
+                        <div class="bg-neutral-950 p-3 rounded-lg border border-white/5 text-xs text-center"><i class="fa-solid fa-trophy text-corner block mb-1 text-base"></i> Competidores</div>
+                        <div class="bg-neutral-950 p-3 rounded-lg border border-white/5 text-xs text-center col-span-2 sm:col-span-2"><i class="fa-solid fa-heart-pulse text-corner block mb-1 text-base"></i> Recreativos para Idosos</div>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-4 mb-6">
+                        <p class="text-xs text-giz/70 mb-2"><strong class="text-white">Dias:</strong> Segunda, Quarta e Sexta (Manhã e Noite)</p>
+                        <p class="text-xs text-giz/70 mb-1">✨ <strong class="text-white">Aula experimental gratuita:</strong> segunda ou quarta.</p>
+                        <p class="text-xs text-red-400">❌ <strong class="text-giz/30">Não aceitamos:</strong> Wellhub, Gympass e TotalPass.</p>
+                    </div>
+
+                    <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-bold text-amber hover:text-white transition-colors">
+                        Agendar aula de Boxe <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Kickboxing Card -->
+                <div class="bg-neutral-900/80 rounded-2xl border border-white/10 p-8 relative overflow-hidden group hover:border-amber transition-colors">
+                    <div class="absolute top-0 right-0 bg-amber text-canvas font-heading px-6 py-2 rounded-bl-2xl text-lg tracking-wider">KICKBOXING</div>
+                    <div class="mb-6 w-16 h-16 rounded-xl bg-amber/20 flex items-center justify-center text-amber text-3xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-heading text-3xl text-white mb-2">TROCAÇÃO COMPLETA</h3>
+                    <p class="text-amber font-semibold text-sm mb-4 uppercase tracking-wider">Disciplina. Respeito. Foco. Evolução.</p>
+                    <p class="text-giz/80 mb-6 leading-relaxed">
+                        Combinação dinâmica de socos e chutes potentes. Trabalha a flexibilidade, potência muscular e resistência integral do corpo em um ambiente seguro e estruturado.
+                    </p>
+
+                    <div class="border-t border-white/10 pt-4 mb-6">
+                        <p class="text-xs text-giz/70 mb-2">⭐ <strong class="text-white">Horários Fixos:</strong> Indicados na grade para acompanhamento.</p>
+                        <p class="text-xs text-amber font-semibold">⚠️ <strong class="text-white">Aviso:</strong> Obrigatório o uso da camiseta preta da equipe.</p>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#horarios" class="inline-flex items-center gap-2 font-bold text-amber hover:text-white transition-colors">
+                            Ver horários completos <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O CT -->
+    <section id="sobre" class="py-24 bg-neutral-950 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-corner text-xs font-bold uppercase tracking-widest block mb-2">NOSSA FILOSOFIA</span>
+                    <h2 class="font-heading text-4xl sm:text-5xl text-white tracking-wide uppercase mb-6">CT YOSHINAGA: MAIS QUE UMA ACADEMIA, UMA FAMÍLIA</h2>
+                    <p class="text-giz/80 mb-6 leading-relaxed font-light">
+                        Localizado em Mogi das Cruzes, o CT Yoshinaga nasceu com o propósito de transformar vidas através do esporte. Nossa estrutura é preparada tanto para quem busca perder peso, ganhar condicionamento e aliviar o estresse do dia a dia, quanto para quem deseja competir em alto nível.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-2 border-corner pl-4">
+                            <span class="block font-heading text-2xl text-white">FOCO E DISCIPLINA</span>
+                            <span class="text-xs text-giz/60">Respeito dentro e fora do ringue</span>
+                        </div>
+                        <div class="border-l-2 border-amber pl-4">
+                            <span class="block font-heading text-2xl text-white">AMBIENTE SEGURO</span>
+                            <span class="text-xs text-giz/60">Professores capacitados e atenciosos</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-xl transition-colors">
+                        Fale conosco no WhatsApp
+                    </a>
+                </div>
+              <div class="relative">
+    <div class="aspect-video bg-neutral-900 rounded-2xl border border-white/10 flex items-center justify-center relative overflow-hidden group">
+        
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="imagens/video-ct.mp4" type="video/mp4">
+            Seu navegador não suporta reprodução de vídeos.
+        </video>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRADE DE HORÁRIOS ORGANIZADA POR DIAS -->
+    <section id="horarios" class="py-24 bg-canvas border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber text-xs font-bold uppercase tracking-widest block mb-2">GRADE DE AULAS</span>
+                <h2 class="font-heading text-4xl sm:text-5xl text-white tracking-wide uppercase">HORÁRIOS DOS TREINOS</h2>
+            </div>
+
+            <!-- Filtros de Horários -->
+            <div class="flex justify-center gap-4 mb-10">
+                <button onclick="filtrarHorarios('todos')" id="btn-todos" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-corner to-amber text-white shadow-lg transition-all cursor-pointer">TODOS</button>
+                <button onclick="filtrarHorarios('boxe')" id="btn-boxe" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-neutral-900 border border-white/10 text-giz hover:text-white transition-all cursor-pointer">BOXE</button>
+                <button onclick="filtrarHorarios('kickboxing')" id="btn-kickboxing" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-neutral-900 border border-white/10 text-giz hover:text-white transition-all cursor-pointer">KICKBOXING</button>
+            </div>
+
+            <!-- Tabela Limpa e Agrupada -->
+            <div class="max-w-4xl mx-auto bg-neutral-900/90 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 bg-neutral-950 p-4 border-b border-white/10 font-heading text-sm text-amber tracking-wider text-center">
+                    <div>MODALIDADE</div>
+                    <div>DIAS DA SEMANA</div>
+                    <div>HORÁRIOS DISPONÍVEIS</div>
+                </div>
+                <div id="lista-horarios" class="divide-y divide-white/5">
+                    <!-- Boxe -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="boxe">
+                        <div class="font-heading text-white text-lg">BOXE</div>
+                        <div class="text-amber text-sm font-semibold">Segunda / Quarta / Sexta</div>
+                        <div class="text-giz/90 text-sm font-medium">06:30 / 19:00</div>
+                    </div>
+
+                    <!-- Kickboxing - Segunda -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="kickboxing">
+                        <div class="font-heading text-white text-lg">KICKBOXING</div>
+                        <div class="text-corner text-sm font-semibold">Segunda-feira</div>
+                        <div class="text-giz/90 text-sm font-medium">08:30 / 15:00 <span class="text-yellow-400 text-xs">(Fixo)</span> / 17:00 <span class="text-yellow-400 text-xs">(Fixo)</span> / 19:00 / 20:30</div>
+                    </div>
+
+                    <!-- Kickboxing - Terça -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="kickboxing">
+                        <div class="font-heading text-white text-lg">KICKBOXING</div>
+                        <div class="text-corner text-sm font-semibold">Terça-feira</div>
+                        <div class="text-giz/90 text-sm font-medium">08:30 / 15:00 / 16:30 / 19:00</div>
+                    </div>
+
+                    <!-- Kickboxing - Quarta -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="kickboxing">
+                        <div class="font-heading text-white text-lg">KICKBOXING</div>
+                        <div class="text-corner text-sm font-semibold">Quarta-feira</div>
+                        <div class="text-giz/90 text-sm font-medium">08:30 / 15:00 <span class="text-yellow-400 text-xs">(Fixo)</span> / 17:00 <span class="text-yellow-400 text-xs">(Fixo)</span> / 19:00 / 20:30</div>
+                    </div>
+
+                    <!-- Kickboxing - Quinta -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="kickboxing">
+                        <div class="font-heading text-white text-lg">KICKBOXING</div>
+                        <div class="text-corner text-sm font-semibold">Quinta-feira</div>
+                        <div class="text-giz/90 text-sm font-medium">08:30 / 15:00 / 16:30 / 19:00</div>
+                    </div>
+
+                    <!-- Kickboxing - Sexta -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="kickboxing">
+                        <div class="font-heading text-white text-lg">KICKBOXING</div>
+                        <div class="text-corner text-sm font-semibold">Sexta-feira</div>
+                        <div class="text-giz/90 text-sm font-medium">08:30 / 15:00 <span class="text-yellow-400 text-xs">(Fixo)</span> / 17:00 <span class="text-yellow-400 text-xs">(Fixo)</span> / 19:00</div>
+                    </div>
+
+                    <!-- Kickboxing - Sábado -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 p-5 text-center md:text-left items-center hover:bg-white/5 transition-colors horario-item" data-cat="kickboxing">
+                        <div class="font-heading text-white text-lg">KICKBOXING</div>
+                        <div class="text-corner text-sm font-semibold">Sábado</div>
+                        <div class="text-giz/90 text-sm font-medium">09:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATLETAS E EQUIPE -->
+    <section id="atletas" class="py-24 bg-neutral-950 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-corner text-xs font-bold uppercase tracking-widest block mb-2">PROFESSORES E LUTADORES</span>
+                <h2 class="font-heading text-4xl sm:text-5xl text-white tracking-wide uppercase">NOSSA EQUIPE</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Head Coach (Com a foto P&B do dono) -->
+                <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden group">
+                    <div class="aspect-[4/5] relative overflow-hidden">
+                        <!-- Substitua 'image_03064e.png' pelo nome do arquivo da foto P&B -->
+                        <img src="imagens/coach.png" alt="Head Coach Yoshinaga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 relative z-20 -mt-16">
+                        <span class="inline-block px-3 py-1 bg-corner text-white text-xs font-bold rounded-md mb-2">HEAD COACH</span>
+                        <h3 class="font-heading text-2xl text-white">YOSHINAGA</h3>
+                        <p class="text-xs text-giz/70 mt-1">Liderança e treinamento especializado em alto rendimento e formação de novos atletas em Mogi das Cruzes.</p>
+                    </div>
+                </div>
+
+                <!-- Atletas / Competições (Com a foto da comemoração no ringue) -->
+                <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden group">
+                    <div class="aspect-[4/5] relative overflow-hidden">
+                        <!-- Substitua 'image_0301d1.png' pelo nome do arquivo da comemoração -->
+                        <img src="imagens/ringue.png" alt="Atletas em Competição" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 relative z-20 -mt-16">
+                        <span class="inline-block px-3 py-1 bg-amber text-canvas text-xs font-bold rounded-md mb-2">EQUIPE DE COMPETIÇÃO</span>
+                        <h3 class="font-heading text-2xl text-white">VITÓRIAS NO RINGUE</h3>
+                        <p class="text-xs text-giz/70 mt-1">Atletas preparados e vitoriosos nos principais campeonatos de luta da região.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="py-24 bg-canvas border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber text-xs font-bold uppercase tracking-widest block mb-2">REGISTROS DO CT</span>
+                <h2 class="font-heading text-4xl sm:text-5xl text-white tracking-wide uppercase">GALERIA DE TREINOS</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Foto 1: Chute Voador -->
+                <div class="aspect-video sm:aspect-square bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden group relative">
+                    <img src="imagens/chute.png" alt="Treino de Kickboxing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-heading text-lg">TREINO DE TÉCNICA</span>
+                    </div>
+                </div>
+
+                <!-- Foto 2: Vista Panorâmica do CT -->
+                <div class="aspect-video sm:aspect-square bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden group relative">
+                    <img src="imagens/ct.jpeg" alt="Estrutura do CT Yoshinaga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-heading text-lg">ESTRUTURA COMPLETA</span>
+                    </div>
+                </div>
+
+                <!-- Foto 3: Turma treinando -->
+                <div class="aspect-video sm:aspect-square bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden group relative sm:col-span-2 lg:col-span-1">
+                    <img src="imagens/treino.png" alt="Turma de Alunos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-heading text-lg">TURMAS ANIMADAS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTATO -->
+    <footer class="bg-neutral-950 border-t border-white/10 py-16 text-giz">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                   <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-neutral-900 border border-white/10 flex items-center justify-center overflow-hidden p-1">
+                            <img src="imagens/logo.png" alt="Yoshinaga Fight Team" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-heading text-xl text-white tracking-wider">YOSHINAGA FIGHT TEAM</span>
+                    </div>
+                    <p class="text-sm text-giz/70 mb-4">
+                        Transformando vidas através do esporte em Mogi das Cruzes - SP. Boxe e Kickboxing de alto nível.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/yoshinagafightteam" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-corner transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-amber transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-heading text-lg text-white mb-4 tracking-wider">LOCALIZAÇÃO</h3>
+                    <p class="text-sm text-giz/70 mb-2"><i class="fa-solid fa-location-dot text-corner mr-2"></i> Mogi das Cruzes - SP</p>
+                    <p class="text-sm text-giz/70"><i class="fa-solid fa-clock text-amber mr-2"></i> Segunda a Sábado (Consulte horários)</p>
+                </div>
+                <div>
+                    <h3 class="font-heading text-lg text-white mb-4 tracking-wider">CONTATO DIRETO</h3>
+                    <p class="text-sm text-giz/70 mb-4">Tem dúvidas sobre planos ou horários? Fale direto com a nossa equipe pelo WhatsApp.</p>
+                    <a href="https://wa.me/5511943301102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-corner to-amber text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-corner/20 hover:scale-105 transition-transform">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> ABRIR WHATSAPP
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-xs text-giz/50">
+                &copy; 2026 Yoshinaga Fight Team. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Seu arquivo JavaScript separado -->
+    <script src="java.js"></script>
+</body>
+</html>
