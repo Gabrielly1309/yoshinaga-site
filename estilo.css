@@ -33,6 +33,10 @@
   background-color: #296ed6;
 }
 
+.brand-gradient {
+  background-image: linear-gradient(to right, var(--color-corner), var(--color-amber));
+}
+
 .font-heading {
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.05em;
@@ -42,7 +46,20 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Fundo sutil com gradiente escuro */
 .bg-hero-pattern {
-  background-image: linear-gradient(to bottom, rgba(18, 17, 17, 0.8), rgba(18, 17, 17, 0.95)), radial-gradient(circle at center, #261818 0%, #121111 70%);
+  background-image: url("imagens/ct.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-booking-button {
+  transition: background-color 300ms, border-color 300ms, box-shadow 300ms, transform 300ms;
+}
+
+.hero-booking-button:hover {
+  background-color: rgba(220, 38, 38, 0.18);
+  border-color: rgba(220, 38, 38, 0.6);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
 }
